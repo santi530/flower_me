@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.garden-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #000000);
+    opacity: 0;
+    transition: opacity 3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.garden-background.visible {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container::before {
+    content: '';
+    width: 70px;
+    height: 200px;
+    border-radius: 50%;
+    border-left: 10px solid green;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 60%;
+    left: 49%;
+}
+
+.container::after {
+    content: '';
+    width: 90px;
+    height: 60px;
+    border-radius: 50%;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid green;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+}
+
+.point {
+    width: 100px;
+    height: 100px;
+    background: #C738BD;
+    background: linear-gradient(180deg, #C738BD 0%, rgb(138, 11, 173) 100%);
+    position: absolute;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 200px;
+    border-top-left-radius: 200px;
+}
+
+.michaela-text {
+    color: #e96bff; /* Use the purplish color from the existing CSS */
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    position: fixed;
+    z-index: 20; /* Ensure it appears above other elements */
+    bottom: 20px; /* Adjust this value to position it higher or lower */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
